@@ -43,7 +43,7 @@ const Navbar = () => {
               Invia
             </button>
           </form>
-          <a href="https://github.com/andreazagoit">
+          <a href="https://github.com/andreazagoit/google-books">
             <GitHubIcon />
           </a>
           <a href="https://www.linkedin.com/in/andrea-zago-1495941b9/">
