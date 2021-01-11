@@ -1,0 +1,63 @@
+@import '../style/variables.scss';
+
+.banner {
+    position: relative;
+
+    &__arrow {
+        cursor: pointer;
+        background-color: #0005;
+        color: white;
+        padding: 12px;
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        &.prev {
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &.next {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+
+    .slides {
+        display: flex;
+        overflow: hidden;
+
+        .slide {
+            cursor: pointer;
+            min-width: 100%;
+            border-radius: 5px;
+            min-height: 400px;
+            background-size: cover;
+            padding: 0 100px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background-position: center top;
+
+            @media (max-width: $phone) {
+                justify-content: center;
+            }
+
+            &__title {
+                font-size: 64px;
+                color: white;
+                margin-bottom: 10px;
+                white-space: nowrap;
+
+                @media (max-width: $phone) {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+}

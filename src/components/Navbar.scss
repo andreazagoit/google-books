@@ -1,0 +1,77 @@
+@import '../style/variables.scss';
+
+.navbar {
+    background-color: $primary;
+    color: $white;
+    position: fixed;
+    width: 100%;
+    z-index: 200;
+    top: 0;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        min-height: 100px;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        @media (max-width: $tablet) {
+            min-height: 84px;
+        }
+
+        .navbar__links {
+            display: flex;
+            gap: 10px;
+
+            @media (max-width: $phone) {
+                width: 100%;
+            }
+
+            form {
+                display: flex;
+                flex: 1;
+
+                input {
+                    height: 36px;
+                    border-radius: 5px;
+                    padding: 0 20px;
+                    border: none;
+                    outline: none;
+                    width: 100%;
+                }
+
+                button {
+                    display: none;
+                }
+            }
+
+            a {
+                background-color: white;
+                color: $primary;
+                height: 36px;
+                width: 36px;
+                border-radius: 5px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 1px solid white;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $primary;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    &__brand {
+        display: flex;
+        align-items: center;
+
+        @media (max-width: $phone) {
+            display: none;
+        }
+    }
+}

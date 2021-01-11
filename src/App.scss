@@ -1,0 +1,58 @@
+@import './style/variables.scss';
+
+body {
+    background-color: $primary;
+}
+
+.app {
+    position: relative;
+    padding-top: 100px;
+
+    @media (max-width: $tablet) {
+        padding-top: 84px;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    button {
+        all: unset;
+        padding: 10px 12px;
+        border: 1px solid $white;
+        color: $white;
+        position: relative;
+        z-index: 10;
+        transition: all 0.5s;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        p{
+            padding-bottom: 2px;
+            margin-left: 10px;
+        }
+
+        &::before {
+            content: '';
+            background-color: white;
+            width: 0;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.5s;
+            z-index: -1;
+            border-radius: 2px;
+        }
+
+        &:hover {
+            color: $primary;
+
+            &::before {
+                width: 100%;
+            }
+        }
+    }
+}

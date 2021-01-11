@@ -1,0 +1,33 @@
+@import '../style/variables.scss';
+
+.homePage {
+    padding-top: 100px;
+
+    @media (max-width: $phone) {
+        padding-top: 84px;
+    }
+
+    .card-list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 0px 20px 20px 20px;
+    }
+
+    .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        #lottie {
+            width: 700px !important;
+            height: 700px !important;
+
+            @media (max-width: $tablet) {
+                width: 100vw !important;
+                height: 100vw !important;
+            }
+        }
+    }
+}
